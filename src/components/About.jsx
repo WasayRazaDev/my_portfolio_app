@@ -1,5 +1,4 @@
-import React from 'react'
-import ProfilePic from '../assets/myprofile.png'
+
 
 const About = (props) => {
 

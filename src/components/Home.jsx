@@ -6,7 +6,7 @@ import { Instagram , Linkedin , Facebook, Github } from 'lucide-react'
 
 const Home = (props) => {
   return (
-    <div className="h-full w-full bg-black flex flex-col md:flex-row items-center px-6 md:px-20">
+    <div className="h-full w-full mt-6 bg-black flex flex-col md:flex-row items-center px-6 md:px-20">
       
       {/* LEFT SIDE: Textual Data */}
       <div className="flex-1 flex flex-col justify-center p-10 space-y-3 order-2 md:order-1 relative">
@@ -18,7 +18,7 @@ const Home = (props) => {
            Hi, I'm <span className="text-[#959595] text-3xl mt-2">{props.portfolioData.profile.name}</span>
         </h2>
 
-        <h1 className="text-5xl md:text-7xl font-black text-white leading-tight relative">
+        <h1 className="text-4xl md:text-7xl font-black text-white leading-tight relative">
           Creative <br />
           <span className="bg-gradient-to-r from-[#FA6E00] to-[#E60026] bg-clip-text text-transparent">
             {props.portfolioData.profile.role}
@@ -85,7 +85,7 @@ const Home = (props) => {
         <div className="flex-1 flex justify-center items-center order-1 md:order-2 mb-20 md:mb-0 relative">
         
         {/* 1. Large Background Glow */}
-        <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#FD6F00] rounded-full blur-[600px] opacity-10 animate-pulse"></div>
+        <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#FD6F00] rounded-full blur-[400px] opacity-10 animate-pulse"></div>
 
         <div className="relative w-80 h-80 md:w-[500px] md:h-[500px] flex items-end justify-center">
             
@@ -96,7 +96,7 @@ const Home = (props) => {
             <div className="relative w-full h-full flex items-end justify-center overflow-visible">
             <img 
                 src={props.portfolioData.profile.photo} 
-                alt="Wasay Raza" 
+                alt={props.portfolioData.profile.name}
                 className="
                 w-auto h-[105%]     /* Height is 110% to make it taller than the container */
                 object-cover

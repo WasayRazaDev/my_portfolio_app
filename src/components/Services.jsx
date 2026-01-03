@@ -45,7 +45,7 @@ const Services = (props) => {
                 {service.title}
               </h3>
               <p className="text-zinc-500 leading-relaxed text-xs">
-                {service.desc}
+                {service.description}
               </p>
             </div>
 
