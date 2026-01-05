@@ -258,7 +258,7 @@ const Portfolio = (props) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-7xl">
           {props.portfolioData.projects.map((project) => (
             <div key={project.id} className="group relative aspect-video rounded-[2.5rem] overflow-hidden bg-zinc-900 border border-zinc-800">
-              <img src={project.img} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" alt="" />
+              <img src={project.img || '/default-profile.png'} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" alt="" />
 
               {/* SLIDE UP OVERLAY */}
               <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out backdrop-blur-sm">
@@ -308,7 +308,7 @@ const Portfolio = (props) => {
 
             {/* The Main Slider Image */}
             <img 
-              src={selectedProject.gallery[currentImgIndex]} 
+              src={selectedProject.gallery[currentImgIndex]  || '/default-profile.png'} 
               className="w-full h-full object-cover transition-opacity duration-300" 
               key={currentImgIndex} 
               alt="Project Showcase" 

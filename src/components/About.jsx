@@ -25,7 +25,7 @@ const About = (props) => {
             
             <div className="relative w-full h-full flex items-end justify-center overflow-visible">
               <img 
-                src={props.portfolioData.profile.photo} 
+                src={props.portfolioData.profile.photo || '/default-profile.png'} 
                 alt={props.portfolioData.profile.name} 
                 className="w-auto h-[120%] object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700 drop-shadow-[0_10px_30px_rgba(0,0,0,1)] z-10 mb-1"
               />

@@ -95,7 +95,7 @@ const Home = (props) => {
             {/* 3. THE IMAGE (Positioned to pop out) */}
             <div className="relative w-full h-full flex items-end justify-center overflow-visible">
             <img 
-                src={props.portfolioData.profile.photo} 
+                src={props.portfolioData.profile.photo || '/default-profile.png'} 
                 alt="Wasay Raza" 
                 className="
                 w-auto h-[105%]     /* Height is 110% to make it taller than the container */
